@@ -76,6 +76,8 @@ class HotelsPage extends Component {
                 return hotels
             case 'UNRATED':
                 return hotels.filter((hotel) => !hotel.rating)
+            case '5':
+                return hotels.filter((hotel) => +hotel.rating === 5)
             default :
                 return hotels.filter((hotel) => (+hotel.rating >= +rating) && (+hotel.rating < +rating + 1))
         }

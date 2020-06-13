@@ -87,11 +87,15 @@ const FilterSidebar = ({filterByName, filterByQuality}) => {
                         <span onClick={() => onChange('hotel-rating')}>{arrowDirection(isHotelQualityVisible)} Quality Rating</span>
                     </div>
 
-                    <div className="filter__body__search__rating-input" style={{display: 'flex', flexDirection: 'column'}}>
-                        {
-                            generateQualityCheckboxes(['all', 5, 4, 3, 2, 1, 'unrated'])
-                        }
-                    </div>
+                    {
+                        isHotelQualityVisible &&
+                        <div className="filter__body__search__rating-input"
+                             style={{display: 'flex', flexDirection: 'column'}}>
+                            {
+                                generateQualityCheckboxes(['all', 5, 4, 3, 2, 1, 'unrated'])
+                            }
+                        </div>
+                    }
                 </div>
             </div>
         </div>
