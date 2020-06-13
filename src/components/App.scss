@@ -1,0 +1,17 @@
+body {
+  background-color: #DC140A;
+}
+.app {
+  padding: 0 3%;
+
+  &__content {
+    background-color: white;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .app {
+    padding: 0;
+  }
+}

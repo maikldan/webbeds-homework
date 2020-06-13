@@ -1,0 +1,18 @@
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__image {
+    height: 100px;
+    width: 130px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .app-header {
+    justify-content: center;
+  }
+}

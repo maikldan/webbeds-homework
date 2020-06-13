@@ -1,0 +1,79 @@
+.promotion-banner {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 10px 0 30px;
+  flex-basis: 10%;
+  border-bottom: 3px solid #DC140A;
+  height: fit-content;
+
+  &__top-side {
+    background-color: #DC140A;
+    color: white;
+    padding: 30px 15px 50px 15px;
+    clip-path: polygon(25% 0%, 100% 0, 100% 85%, 0 100%, 0 0);
+    z-index: 2;
+
+    &__header {
+      border-bottom: 1px solid rgba(255,255,255, 0.3);
+      padding-bottom: 50px;
+      font-size: 22px;
+    }
+
+    &__footer {
+      display: flex;
+      flex-direction: column;
+      & > span {
+        font-size: 12px;
+      }
+
+      .price {
+        font-size: 35px;
+      }
+    }
+  }
+
+  &__middle-side {
+    position: relative;
+
+    img {
+      position: absolute;
+      right: 0;
+      width: 100px;
+      top: -30px;
+      z-index: 1;
+    }
+  }
+  &__bottom-side {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 340px;
+    clip-path: polygon(26% 5%, 100% 18%, 100% 100%, 0 100%, 0 0);
+
+    a {
+      margin-right: 15px;
+      margin-bottom: 15px;
+      background-color: #2EB300;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 3px;
+      -webkit-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.75);
+      -moz-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.75);
+      box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.75);
+      cursor: pointer;
+      font-size: 18px;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .promotion-banner {
+    display: none;
+  }
+}

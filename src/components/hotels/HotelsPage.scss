@@ -1,0 +1,40 @@
+.hotels-page {
+  background-color: white;
+  flex-basis: 90%;
+
+  &__header {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  &__content {
+    display: inline-flex;
+    width: 100%;
+    &__results {
+      flex-basis: 75%;
+    }
+    &__filter {
+      flex-basis: 25%;
+    }
+  }
+
+  &__aside {
+    display: inline-flex;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hotels-page {
+    flex-basis: 100%;
+    padding: 0 1%;
+
+    &__content {
+      &__results {
+        flex-basis: 99%;
+      }
+      &__filter {
+        flex-basis: 0;
+      }
+    }
+  }
+}
